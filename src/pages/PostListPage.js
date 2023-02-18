@@ -1,9 +1,10 @@
-import Button from "../components/common/Buttons";
+import AuthForm from "../components/auth/AuthForm";
+import AuthTemplate from "../components/auth/AuthTemplate";
 
 export default function PostListPage() {
   return (
-    <div>
-      <Button>버튼</Button>
-    </div>
+    <AuthTemplate>
+      <AuthForm />
+    </AuthTemplate>
   )
 }
