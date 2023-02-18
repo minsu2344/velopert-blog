@@ -1,3 +1,9 @@
+import Button from "../components/common/Buttons";
+
 export default function PostListPage() {
-  return <div>포스트 리스트</div>
+  return (
+    <div>
+      <Button>버튼</Button>
+    </div>
+  )
 }
