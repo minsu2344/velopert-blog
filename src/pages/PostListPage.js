@@ -1,10 +1,10 @@
-import AuthForm from "../components/auth/AuthForm";
-import AuthTemplate from "../components/auth/AuthTemplate";
+import Header from "../components/common/Header";
 
 export default function PostListPage() {
   return (
-    <AuthTemplate>
-      <AuthForm />
-    </AuthTemplate>
+    <>
+      <Header />
+      <div>안녕하세요.</div>
+    </>
   )
 }
