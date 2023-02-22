@@ -74,7 +74,12 @@ export default function RegisterForm() {
   // user 값이 잘 설정되었는지 확인
   useEffect(() => {
     if(user) {
-      navigate('/')
+      navigate('/');
+      try {
+        localStorage.setItem('user', JSON.stringify(user))
+      } catch(e) {
+        console.log('localStorage is not working')
+      }
     }
   }, [user, navigate])
 
