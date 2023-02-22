@@ -1,8 +1,8 @@
 import styled, {css} from "styled-components";
-import { useNavigate } from "react-router-dom";
 import palette from "../../lib/styles/palette";
+import {Link} from 'react-router-dom';
 
-const StyleButton = styled.button`
+const buttonStyle = css`
   border: none;
   border-radius: 0.25rem;
   font-size: 1rem;
@@ -34,16 +34,18 @@ const StyleButton = styled.button`
   `}
 `
 
-export default function Button({to, history, ...rest}) {
-  const navigate = useNavigate();
-  function onClick(e) {
-    // to가 있다면 다른 페이지 이동
-    if(to) {
-      navigate(to);
-    }
-    if(rest.onClick) {
-      rest.onClick(e);
-    }
-  }
-  return <StyleButton {...rest} onClick={onClick} />
+const StyledButton = styled.button`
+  ${buttonStyle}
+`
+
+const StyledLink = styled(Link)`
+  ${buttonStyle}
+`;
+
+export default function Button(props) {
+  return props.to ? (
+    <StyledLink {...props} cyan={props.cyan ? 1 : 0} />
+  ) : (
+    <StyledButton {...props} />
+  );
 }

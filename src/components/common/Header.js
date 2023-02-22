@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link } from "../../../node_modules/react-router-dom/dist/index";
+import { Link } from "react-router-dom";
 import Button from "./Buttons";
 import Responsive from "./Responsive";
 
