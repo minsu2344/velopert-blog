@@ -1,9 +1,9 @@
-import Header from "../components/common/Header";
+import HeaderContainer from "../modules/containers/HeaderContainer";
 
 export default function PostListPage() {
   return (
     <>
-      <Header />
+      <HeaderContainer />
       <div>안녕하세요.</div>
     </>
   )
